@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+    int a,b,c,d,m,n;
+    float x1,x2;
+    printf("Enter a,b and m for ax1+bx2=m:");
+    scanf("%d %d %d",&a,&b,&m);
+    printf("Enter c,d and n for cx1+dx2=n:");
+    scanf("%d %d %d",&c,&d,&n);
+    if (a*d-c*b!=0)
+    {
+        x1 = (float)(m*d - b*n) / (float)(a*d - c*b);
+        x2 = (float)(n*a - m*c) / (float)(a*d - c*b);
+        printf("x1=%f\n",x1);
+        printf("x2=%f\n",x2);
+
+    }
+    else
+    printf("ad-cb=0");
+}
