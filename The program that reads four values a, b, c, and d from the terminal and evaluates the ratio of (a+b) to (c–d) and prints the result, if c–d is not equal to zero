@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main()
+{
+    int a,b,c,d,result;
+    printf("Enter a,b,c,d:");
+    scanf("%d %d %d %d",&a,&b,&c,&d);
+    result=(c-d!=0)?((float)(a+b)/(float)(c-d)):printf("Can't be evaluated as c-d=0");
+    if (c-d!=0)
+    printf("result%d",result);
+    return 0;
+}
