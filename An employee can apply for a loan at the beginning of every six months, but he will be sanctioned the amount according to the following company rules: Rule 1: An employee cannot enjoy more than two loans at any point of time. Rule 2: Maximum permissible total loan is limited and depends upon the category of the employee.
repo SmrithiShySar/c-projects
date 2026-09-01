@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+    float maxloan=50000,loan1,loan2,loan3,sum2;
+    int i,n;
+    i=1;
+    printf("Enter the number of entries:");
+    scanf("%d",&n);
+    while(i<=n)
+    {
+        printf("Enter loan1 amount:");
+        scanf("%f",&loan1);
+        printf("Enter loan2 amount:");
+        scanf("%f",&loan2);
+        i=i+1;
+        if (loan1==0 || loan2==0)
+        {
+            printf("Enter loan3 amount:");
+            scanf("%f",&loan3);
+            sum2=loan1+loan2+loan3;
+            if (sum2<=50000)
+            printf("loan3 sanctioned\n");
+            else
+            printf("Max loan amount exceeded\n");
+        }
+        else
+        printf("Loan 3 can't be sanctioned because 2 existing loans\n");
+    }
+
+}
