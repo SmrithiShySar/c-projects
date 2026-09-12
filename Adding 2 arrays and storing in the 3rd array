@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+    int arr1[5],arr2[5],arr3[5],i,a,b,c;
+    for(i=0;i<5;i++)
+    {
+        printf("enter a:");
+        scanf("%d",&arr1[i]);
+        printf("enter b:");
+        scanf("%d",&arr2[i]);
+        arr3[i]=arr1[i]+arr2[i];
+        
+    }
+    for(i=0;i<5;i++)
+        {
+            printf("%d\n",arr3[i]);
+        }
+}
