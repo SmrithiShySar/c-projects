@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+   float x,term,sum,fact;
+    int n,i,j,b;
+    printf("enter radians");
+    scanf("%f",&x);
+    printf("enter no of terms:");
+    scanf("%d",&n);
+    b=1;
+    sum=0;
+    for(i=1;i<=n;i++)
+        {
+            fact=1;
+            for(j=1;j<=b;j++)
+                {
+                    fact=fact*j;
+                }
+            term=pow(x,b)/fact;
+            if(i%2==0)
+            sum=sum+(-1*term);
+            else if(i%2!=0)
+            sum=sum+term;
+            b=b+2;
+            
+        }
+    printf("sine series:sin(%.2f)=%.2f",x,sum);
+    
+}
