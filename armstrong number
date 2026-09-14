@@ -1,0 +1,21 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n,rem,temp,sum=0;
+    printf("enter number:");
+    scanf("%d",&n);
+    temp=n;
+    while(n!=0)
+        {
+            rem=n%10;
+            sum=sum+(pow(rem,3));
+            n=n/10;
+            
+        }
+    if(temp==sum)
+    printf("yes");
+    else
+    printf("no");
+}
