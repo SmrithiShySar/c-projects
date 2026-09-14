@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+   int a,dec=0,rem,i=0,t;
+    printf("enter a");
+    scanf("%d",&a);
+    while(a!=0)
+        {
+            rem=a%10;
+            t=rem*(pow(2,i));
+            dec=dec+t;
+            a=a/10;
+            i=i+1;
+        }
+    printf("decimal:%d",dec);
+}
