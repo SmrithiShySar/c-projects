@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int n=7,place=1,rem,i,sum=0;
+    while(n!=0)
+        {
+            rem=n%2;
+            sum=sum+(rem*place);
+            place=place*10;
+            n=n/2;
+         }
+    printf("%d",sum);
+}
+
+
