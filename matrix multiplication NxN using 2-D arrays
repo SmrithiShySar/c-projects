@@ -1,0 +1,46 @@
+#include <stdio.h>
+int main()
+{
+    int a[3][3],b[3][3],c[3][3],i,val,j,k,sum;
+    for(i=0;i<3;i++)
+        {
+            for(j=0;j<3;j++)
+                {
+                    printf("enter val:");
+                    scanf("%d",&val);
+                    a[i][j]=val;
+                }
+        }
+    for(i=0;i<3;i++)
+        {
+            for(j=0;j<3;j++)
+                {
+                    printf("enter val:");
+                    scanf("%d",&val);
+                    b[i][j]=val;
+                }
+        }
+    printf("product of matrix\n");
+    for(i=0;i<3;i++)
+        {
+            for(j=0;j<3;j++)
+                {   sum=0;
+                    for(k=0;k<3;k++)
+                        {
+                            sum=sum+a[i][k]*b[k][j];
+                        }
+                    c[i][j]=sum;
+                }
+                
+        }
+    printf("product:");
+    for(i=0;i<3;i++)
+        {
+            for(j=0;j<3;j++)
+                {
+                    printf("%d  ",c[i][j]);
+                }
+            printf("\n");   
+        }
+}
+    
