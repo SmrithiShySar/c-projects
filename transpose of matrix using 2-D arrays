@@ -1,0 +1,46 @@
+#include <stdio.h>
+int main()
+{
+    int mat[3][3],b[3][3],i,val,j;
+    for(i=0;i<3;i++)
+        {
+            for(j=0;j<3;j++)
+                {
+                    printf("enter val:");
+                    scanf("%d",&val);
+                    mat[i][j]=val;
+                }
+        }
+    for(i=0;i<3;i++)
+        {
+            for(j=0;j<3;j++)
+                {
+                    printf("mat[%d][%d]:%d\n",i,j,mat[i][j]);
+                }
+        }
+    printf("the entered matrix is:\n");
+    for(i=0;i<3;i++)
+        {
+            for(j=0;j<3;j++)
+                {
+                    printf("%d  ",mat[i][j]);
+                }
+            printf("\n");
+        }
+    for(i=0;i<3;i++)
+        {
+            for(j=0;j<3;j++)
+                {
+                    b[i][j]=mat[j][i];
+                }
+        }
+    printf("the transpose matrix is:\n");
+    for(i=0;i<3;i++)
+        {
+            for(j=0;j<3;j++)
+                {
+                    printf("%d  ",b[i][j]);
+                }
+            printf("\n");
+        }
+}
