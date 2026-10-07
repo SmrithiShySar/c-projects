@@ -1,0 +1,45 @@
+#include <stdio.h>
+int main()
+{
+    int girls[4][3],i,j,val,sum=0,sum1=0,sum2=0;
+    for(i=1;i<=4;i++)
+        {
+            for(j=1;j<=3;j++)
+                {
+                    printf("enter value of item%d sales salesgirls%d",j,i);
+                    scanf("%d",&val);
+                    girls[i-1][j-1]=val;
+            
+                }
+            printf("\n");
+            
+        }
+    for(i=0;i<4;i++)
+        {
+            sum=0;
+            for(j=0;j<3;j++)
+                {
+                    sum=sum+girls[i][j];
+                }
+            printf("sales by sales girls%d:%d\n",i+1,sum);
+        }
+    for(i=0;i<3;i++)
+        {
+            sum1=0;
+            for(j=0;j<4;j++)
+                {
+                    sum1=sum1+girls[j][i];
+                }
+            printf("total sales of item%d:%d\n",i+1,sum1);
+            
+        }
+    for(i=0;i<4;i++)
+        {
+            for(j=0;j<3;j++)
+                {
+                    sum2=sum2+girls[i][j];
+                }
+        }
+         printf("grand total:%d",sum2);
+
+}
