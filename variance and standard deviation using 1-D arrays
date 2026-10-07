@@ -1,0 +1,31 @@
+#include <stdio.h>
+#inlcude <math.h>;
+int main()
+{
+    int i,j,n=10;
+    float a[10],var,s,median,h,sum=0,k;
+    for(i=0;i<n;i++)
+        {
+            printf("enter value:");
+            scanf("%f",&h);
+            a[i]=h;
+        }
+    for(i=0;i<n;i++)
+        {
+            sum=sum+a[i];
+        }
+    median=sum/n;
+    sum=0;
+    for(i=0;i<10;i++)
+        {
+            h=a[i]-median;
+            if(h>=0)
+                k=pow(h,2);
+            else if(h<0)
+                k=pow(-h,2);
+            sum=sum+k;
+                
+        }
+    printf("variance:%f\n",sum/n);
+    printf("standard deviation:%f",pow(sum/n,0.5));
+}
