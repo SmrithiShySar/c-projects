@@ -1,0 +1,41 @@
+// Online C compiler (editor)
+// Write and run C online using this editor.
+
+#include <stdio.h>
+
+int main()
+{
+   int a[31][10],i,j,l,s,city,day,city1,day1;
+    for(i=0;i<31;i++)
+        {
+            for(j=0;j<10;j++)
+                {
+                    printf("enter temp");
+                    scanf("%d",&a[i][j]);
+                }
+        }
+    s=a[0][0];
+    l=a[0][0];
+    city=day=city1=day1=1;
+    for(i=0;i<31;i++)
+        {
+            for(j=0;j<10;j++)
+                {
+                    if(a[i][j]>=l)
+                       { 
+                           l=a[i][j];
+                           city=j+1;
+                           day=i+1;
+                        }
+                    if(s>=a[i][j])
+                        { 
+                           s=a[i][j];
+                           city1=j+1;
+                           day1=i+1;
+                        }
+                }
+        }
+    printf("small temp:%d  day:%d  city:%d\n",s,city1,day1);
+    printf("high temp:%d  day:%d  city:%d\n",l,city,day);
+    
+}
