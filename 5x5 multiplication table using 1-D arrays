@@ -1,0 +1,26 @@
+// Online C compiler (editor)
+// Write and run C online using this editor.
+
+#include <stdio.h>
+
+int main()
+{
+   int a[5][5],i,j,val;
+    printf("     MULTIPLICATION TABLE\n");
+    printf("     ");
+    for(i=0;i<5;i++)
+        printf("%d  ",i+1);
+    printf("\n");
+    printf("--------------------------------------\n");
+    for(i=0;i<5;i++)
+        {   printf("%d |  ",i+1);
+            for(j=0;j<5;j++)
+                {
+                    val=(i+1)*(j+1);
+                    a[i][j]=val;
+                    printf("%d ",a[i][j]);
+                }
+            printf("\n");
+        }
+   
+} si
