@@ -1,0 +1,51 @@
+// Online C compiler (editor)
+// Write and run C online using this editor.
+
+#include <stdio.h>
+
+int main()
+{
+   int a[4][3],i,j,val,l,s,gt=0;
+    for(i=0;i<4;i++)
+        {
+            for(j=0;j<3;j++)
+                {
+                    printf("enter slaes amount of item%d by salesgirl%d:\n",j+1,i+1);
+                    scanf("%d",&val);
+                    a[i][j]=val;
+                }
+        }
+    printf("          item1         item2         item3\n");
+    for(i=0;i<4;i++)
+        {   printf("salesgirl%d:          ",i+1);
+            for(j=0;j<3;j++)
+                {
+                    printf("%d      ",a[i][j]);
+                }
+            printf("\n");
+        }
+    int s1=0;
+    for(i=0;i<4;i++)
+        {
+            for(j=0;j<3;j++)
+                {
+                    s1=s1+a[i][j];
+                    gt=gt+a[i][j];
+                }
+            printf("sales by salesgirl%d:%d\n",i+1,s1);
+            s1=0;
+            
+        }
+    s1=0;
+    for(i=0;i<3;i++)
+        {
+            for(j=0;j<4;j++)
+                {
+                    s1=s1+a[j][i];
+                }
+           printf("sales of item%d:%d\n",i+1,s1);
+           s1=0;
+                
+        }
+    printf("grand total:%d\n",gt);
+}
