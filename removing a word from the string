@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+int main()
+{
+   char a[50]="is at hi  a is";
+    char b[10];
+    printf("enter word");
+    scanf("%s",b);
+    int i,j,m,n,k,l,c1=0,s,pos;
+    m=strlen(a);
+    n=strlen(b);
+    for(i=0;i<=m;i++)
+        {
+            if(a[i]==' ' || a[i]=='.' || a[i]=='\n' || a[i]=='\0');
+            {
+                if(i-n>=0)
+                {    c1=0;
+                    for(j=i-n,k=0;j<i && k<n;j++,k++)
+                        {
+                            if(a[j]==b[k])
+                                c1=c1+1;
+                        }
+                     if(c1==n)
+                     {
+                         pos=i-n;
+                         for(s=0;s<n;s++)
+                             {
+                                 for(l=pos;l<=m;l++)
+                                 {
+                                 a[l]=a[l+1];
+                                 }
+                             }
+                         
+                     }
+                }
+            }
+        }
+    puts(a);
+        
+}
